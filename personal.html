@@ -1,18 +1,184 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
-    <title>ประวัติส่วนตัว</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ประวัติส่วนตัว</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ffd6e7,#fff0f6,#ffe4ef);
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* หัวใจลอย */
+.heart{
+    position:fixed;
+    color:#ff8fb1;
+    animation:float 8s linear infinite;
+    pointer-events:none;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+    to{
+        transform:translateY(-120px);
+        opacity:1;
+    }
+}
+
+/* เมนู */
+nav{
+    background:rgba(255,255,255,.6);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    padding:18px;
+    position:sticky;
+    top:0;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    background:#ff9fc6;
+    padding:10px 20px;
+    border-radius:30px;
+    transition:.3s;
+    font-weight:bold;
+}
+
+nav a:hover{
+    background:#ff6fa9;
+    transform:translateY(-3px) scale(1.05);
+}
+
+/* กล่องข้อมูล */
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.card{
+    width:800px;
+    background:rgba(255,255,255,.65);
+    backdrop-filter:blur(12px);
+    border-radius:25px;
+    padding:40px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(255,150,180,.4);
+}
+
+.profile-img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:6px solid #ffb6d5;
+    object-fit:cover;
+    margin-bottom:20px;
+}
+
+h1{
+    color:#ff5d98;
+    margin-bottom:15px;
+}
+
+.info{
+    text-align:left;
+    margin-top:25px;
+}
+
+.info p{
+    background:#fff7fb;
+    padding:12px;
+    border-radius:15px;
+    margin:12px 0;
+    color:#555;
+    font-size:18px;
+}
+
+.footer{
+    margin-top:30px;
+    color:#ff6fa9;
+}
+</style>
+
 </head>
 <body>
-<h1>ประวัติส่วนตัว</h1>
-<img src"imag>                
-<p>ชื่อ สุธิดา เกตุแก้ว</p>
-  ชื่อเล่น เฟิร์น
-  อายุ17
-  เกิด 04/01/09
-  เบอร์0656621037
-  ความฝัน พยาบาล
-</p>
-<p>โรงเรียนพานทอง</p>
+
+<nav>
+    <a href="index.html">🏠 หน้าแรก</a>
+    <a href="profile.html">👤 ประวัติส่วนตัว</a>
+    <a href="education.html">🎓 ประวัติการศึกษา</a>
+    <a href="personal.html">💖 ผลงาน</a>
+    <a href="contact.html">📞 ติดต่อ</a>
+</nav>
+
+<div class="container">
+
+<div class="card">
+
+<img src="profile.jpg" alt="รูปโปรไฟล์" class="profile-img">
+
+<h1>👤 ประวัติส่วนตัว</h1>
+
+<div class="info">
+
+<p><strong>ชื่อ :</strong> นางสาว สุธิดา เกตุแก้ว</p>
+
+<p><strong>ชื่อเล่น :</strong> เฟิร์น</p>
+
+<p><strong>วันเกิด :</strong> 04 / 01 / 2009</p>
+
+<p><strong>อายุ :</strong> 17 ปี</p>
+
+<p><strong>โรงเรียน :</strong> พานทอง</p>
+
+<p><strong>แผนการเรียน :</strong> วิทยาศาสตร์และคณิตศาสตร์</p>
+
+<p><strong>งานอดิเรก :</strong> ฟังเพลง ดูหนัง เล่นเกม อ่านหนังสือ</p>
+
+<p><strong>ความสามารถพิเศษ :</strong> ร้องเพลง เขียนโค้ด</p>
+
+<p><strong>คติประจำใจ :</strong> "ความพยายามไม่เคยทรยศคนที่ตั้งใจ"</p>
+
+</div>
+
+<div class="footer">
+🌸 Thank you for visiting my Portfolio 🌸
+</div>
+
+</div>
+
+</div>
+
+<script>
+// หัวใจลอย
+for(let i=0;i<30;i++){
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="💗";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(15+Math.random()*20)+"px";
+heart.style.animationDuration=(5+Math.random()*5)+"s";
+heart.style.animationDelay=Math.random()*5+"s";
+document.body.appendChild(heart);
+}
+</script>
+
 </body>
-</html>
+    </html>
